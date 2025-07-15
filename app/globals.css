@@ -282,3 +282,30 @@
 .pencil-draw {
   animation: pencilDraw 1.5s ease-out forwards;
 }
+
+@keyframes catWave {
+  0%, 100% {
+    transform: rotate(0deg);
+    transform-origin: 38px 60px;
+  }
+  20% {
+    transform: rotate(-18deg);
+    transform-origin: 38px 60px;
+  }
+  40% {
+    transform: rotate(0deg);
+    transform-origin: 38px 60px;
+  }
+  60% {
+    transform: rotate(-18deg);
+    transform-origin: 38px 60px;
+  }
+  80% {
+    transform: rotate(0deg);
+    transform-origin: 38px 60px;
+  }
+}
+
+.cat-wave {
+  animation: catWave 1.2s infinite cubic-bezier(0.4, 0.2, 0.6, 0.8);
+}

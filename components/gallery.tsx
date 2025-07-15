@@ -297,7 +297,7 @@ export default function Gallery() {
                          {/* Stats */}
                          <div className="flex absolute top-4 left-4 items-center justify-between text-xs text-gray-500 font-hand">
                            
-                           <span>{new Date(gif.createdAt).toLocaleDateString()}</span>
+                           <span>{new Date(gif.createdAt).toISOString().slice(0, 10)}</span>
                          </div>
                        </div>
                      </div>

@@ -171,12 +171,16 @@ export const HandDrawnInput = ({ children, className = "" }: { children: React.R
 
   return (
     <div className={`relative ${className}`}>
-      <div className="absolute inset-0 bg-[#f8f9fa] organic-clip-1"></div>
       <svg
         className="absolute inset-0 w-full h-full pointer-events-none"
         viewBox="0 0 600 120"
         preserveAspectRatio="none"
       >
+        {/* Filled paper background, clipped to border */}
+        <path
+          d="M15,18 Q22,12 38,15 Q58,8 78,12 L520,22 Q540,18 555,25 Q575,15 585,28 Q590,18 585,38 Q592,58 585,78 L592,88 Q598,108 578,105 Q558,108 538,102 L58,112 Q38,115 18,108 Q8,115 12,95 Q5,75 8,55 L5,35 Q2,15 15,18 Z"
+          fill="#f8f9fa"
+        />
         <path
           ref={pathRef}
           d="M15,18 Q22,12 38,15 Q58,8 78,12 L520,22 Q540,18 555,25 Q575,15 585,28 Q590,18 585,38 Q592,58 585,78 L592,88 Q598,108 578,105 Q558,108 538,102 L58,112 Q38,115 18,108 Q8,115 12,95 Q5,75 8,55 L5,35 Q2,15 15,18 Z"
@@ -373,12 +377,16 @@ export const ControlPanel = ({
 
   return (
     <div className={`relative  ${className}`}>
-      <div className="absolute inset-0 bg-[#f8f9fa] organic-clip-1 paper-texture"></div>
       <svg
         className="absolute inset-0 w-full h-full pointer-events-none"
         viewBox="0 0 400 80"
         preserveAspectRatio="none"
       >
+        {/* Filled paper background, clipped to border */}
+        <path
+          d="M15,12 Q22,8 38,11 Q58,5 78,9 L322,15 Q342,12 358,18 Q378,8 385,22 Q390,12 385,32 Q392,42 385,52 L390,58 Q395,72 375,69 Q355,72 335,66 L65,75 Q45,78 25,72 Q8,78 12,62 Q5,52 8,42 L5,32 Q2,12 15,12 Z"
+          fill="#f8f9fa"
+        />
         <path
           ref={pathRef}
           d="M15,12 Q22,8 38,11 Q58,5 78,9 L322,15 Q342,12 358,18 Q378,8 385,22 Q390,12 385,32 Q392,42 385,52 L390,58 Q395,72 375,69 Q355,72 335,66 L65,75 Q45,78 25,72 Q8,78 12,62 Q5,52 8,42 L5,32 Q2,12 15,12 Z"

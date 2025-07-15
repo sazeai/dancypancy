@@ -15,7 +15,7 @@ export async function POST(request: NextRequest) {
 
     // Step 1: Expand the prompt using Gemini Flash (exactly like Google's demo)
     const expandPromptResponse = await ai.models.generateContent({
-      model: "gemini-2.0-flash",
+      model: "gemini-2.0-flash-lite",
       contents: prompt,
       config: {
         temperature: 1,

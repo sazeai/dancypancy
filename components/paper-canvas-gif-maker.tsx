@@ -15,7 +15,7 @@ import {
   PencilFilters,
 } from "./hand-drawn-elements"
 import { createGifFromDataUrls } from "../lib/gif-creator-client"
-import Gallery from "@/components/gallery"
+
 
 interface Frame {
   frameNumber: number
@@ -364,11 +364,29 @@ export default function HandDrawnGifMaker() {
                       <div className="text-center">
                         <div className="mb-6">
                           <svg width="100" height="100" viewBox="0 0 100 100" className="mx-auto">
-                            {/* Simple line art doodle */}
-                            <path d="M20,50 Q30,30 50,50 Q70,70 80,50" stroke="#1A1A1A" strokeWidth="2" fill="none"/>
-                            <circle cx="30" cy="40" r="3" fill="#1A1A1A"/>
-                            <circle cx="70" cy="40" r="3" fill="#1A1A1A"/>
-                            <path d="M25,60 Q35,65 45,60" stroke="#1A1A1A" strokeWidth="1.5" fill="none"/>
+                            {/* Cartoon cat waving - hand-drawn style */}
+                            {/* Cat body */}
+                            <ellipse cx="50" cy="70" rx="22" ry="15" fill="#fff3cd" stroke="#1A1A1A" strokeWidth="2"/>
+                            {/* Cat head */}
+                            <ellipse cx="50" cy="45" rx="15" ry="13" fill="#fff3cd" stroke="#1A1A1A" strokeWidth="2"/>
+                            {/* Cat ears */}
+                            <polygon points="38,38 42,28 46,40" fill="#fff3cd" stroke="#1A1A1A" strokeWidth="2"/>
+                            <polygon points="62,38 58,28 54,40" fill="#fff3cd" stroke="#1A1A1A" strokeWidth="2"/>
+                            {/* Cat face */}
+                            <ellipse cx="46" cy="45" rx="2" ry="2.5" fill="#1A1A1A"/>
+                            <ellipse cx="54" cy="45" rx="2" ry="2.5" fill="#1A1A1A"/>
+                            <path d="M48,52 Q50,54 52,52" stroke="#1A1A1A" strokeWidth="1.5" fill="none"/>
+                            {/* Cat waving arm */}
+                            <path d="M35,60 Q25,50 38,45" stroke="#1A1A1A" strokeWidth="2.5" fill="none" className="cat-wave"/>
+                            {/* Cat other arm */}
+                            <path d="M65,60 Q75,65 62,50" stroke="#1A1A1A" strokeWidth="2.5" fill="none"/>
+                            {/* Cat tail */}
+                            <path d="M70,80 Q90,90 80,70" stroke="#1A1A1A" strokeWidth="2" fill="none"/>
+                            {/* Whiskers */}
+                            <path d="M40,48 Q35,47 32,45" stroke="#1A1A1A" strokeWidth="1" fill="none"/>
+                            <path d="M40,50 Q36,50 33,52" stroke="#1A1A1A" strokeWidth="1" fill="none"/>
+                            <path d="M60,48 Q65,47 68,45" stroke="#1A1A1A" strokeWidth="1" fill="none"/>
+                            <path d="M60,50 Q64,50 67,52" stroke="#1A1A1A" strokeWidth="1" fill="none"/>
                           </svg>
                         </div>
                         <div className="text-gray-400 font-hand text-lg">
@@ -431,7 +449,6 @@ export default function HandDrawnGifMaker() {
           </svg>
         </AnimatedDrawing>
       </div>
-      <Gallery />
     </div>
    
   )
