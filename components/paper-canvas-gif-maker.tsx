@@ -15,7 +15,7 @@ import {
   PencilFilters,
 } from "./hand-drawn-elements"
 import { createGifFromDataUrls } from "../lib/gif-creator-client"
-
+import Gallery from "@/components/gallery"
 
 interface Frame {
   frameNumber: number
@@ -449,6 +449,7 @@ export default function HandDrawnGifMaker() {
           </svg>
         </AnimatedDrawing>
       </div>
+      <Gallery />
     </div>
    
   )
